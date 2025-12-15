@@ -24,7 +24,7 @@ class TestController extends Controller
     {
         return view('articles.order');
     }
-    public function items()
+    public function index()
     {
         $data = [
             [ "id" => 1, "item" => "Apple" ],

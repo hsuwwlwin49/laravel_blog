@@ -8,7 +8,7 @@
 	 <h1>Article List</h1>
 	 <ul>
 		 <?php foreach($articles as $article): ?>
-		 <li><?php echo $article['items'] ?></li>
+		 <li><?php echo $article['item'] ?></li>
 		 <?php endforeach ?>
 	 </ul>
 </body>
