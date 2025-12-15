@@ -24,7 +24,11 @@ class TestController extends Controller
     {
         return view('articles.order');
     }
+<<<<<<< HEAD
     public function index()
+=======
+    public function items()
+>>>>>>> 64754173b969fcbdff763dc4ebb5c450af842c16
     {
         $data = [
             [ "id" => 1, "item" => "Apple" ],
