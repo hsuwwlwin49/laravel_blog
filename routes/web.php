@@ -28,8 +28,5 @@ use App\Http\Controllers\TEst\TestController;
    Route::get('/articles/detail/{id}', [TestController::class, 'detail']);
    Route::get('/articles/test', [TestController::class, 'test']);
    Route::get('/articles/order', [TestController::class, 'order']);
-<<<<<<< HEAD
    Route::get('/articles/index', [TestController::class, 'index']);
-=======
-   Route::get('/articles/items', [TestController::class, 'items']);
->>>>>>> 64754173b969fcbdff763dc4ebb5c450af842c16
+
