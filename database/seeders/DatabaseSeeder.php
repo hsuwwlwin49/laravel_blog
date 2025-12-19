@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Article::factory(10)->create();
+        //Article::factory(10)->create();
 
         // Categories::factory(10)->create();
 
@@ -27,9 +27,9 @@ class DatabaseSeeder extends Seeder
         // Tags::factory(10)->create();
 
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }

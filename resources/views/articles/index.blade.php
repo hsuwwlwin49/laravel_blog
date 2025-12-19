@@ -5,11 +5,22 @@
  <title>Article List</title>
 </head>
 <body>
-	 <h1>Article List</h1>
+	
+ <h1>Article List</h1>
+ 
+
+{{-- <h2>{{ $article->title }}</h2>
+<p>{{ $article->body }}</p> --}}
+
+
+	 
 	 <ul>
-		 <?php foreach($articles as $article): ?>
-		 <li><?php echo $article['item'] ?></li>
+	 <?php foreach($articles as $article): ?> 
+		 <li><?php echo $article['title'] ?></li>
 		 <?php endforeach ?>
 	 </ul>
+
+	
+
 </body>
 </html>
