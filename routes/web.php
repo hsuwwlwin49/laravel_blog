@@ -1,7 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\UserController;
 
+
+Route::get('/test-relation', [UserController::class, 'index']);
+
+Route::get('/articles', [ArticleController::class, 'index']);
+Route::get('/articles/detail', [ArticleController::class, 'detail']);
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -39,6 +46,5 @@ use Illuminate\Support\Facades\Route;
 //     //dd($articles);   // Dump and Die here
 // });
 
-use App\Http\Controllers\ArticleController;
-Route::get('/articles', [ArticleController::class, 'index']);
-Route::get('/articles/detail', [ArticleController::class, 'detail']);
+
+

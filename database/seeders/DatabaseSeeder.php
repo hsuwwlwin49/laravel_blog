@@ -9,6 +9,9 @@ use App\Models\Article;
 use App\Models\Categories;
 use App\Models\Comments;
 use App\Models\Tags;
+use App\Models\Post;
+use App\Models\Profile;
+
 class DatabaseSeeder extends Seeder
 {
     use WithoutModelEvents;
@@ -22,7 +25,7 @@ class DatabaseSeeder extends Seeder
 
         // Categories::factory(10)->create();
 
-        // Comments::factory(10)->create();
+        //Comments::factory(10)->create();
 
         // Tags::factory(10)->create();
 
@@ -31,5 +34,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        //User::factory(10)->create();
+       // Post::factory(10)->create();
+       //Profile::factory(10)->create();
+        
     }
 }

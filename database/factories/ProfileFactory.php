@@ -3,12 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Post;
+use App\Models\User;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Comments>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Profile>
  */
-class CommentsFactory extends Factory
+class ProfileFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +18,9 @@ class CommentsFactory extends Factory
     public function definition(): array
     {
         return [
-            'comment' => fake()->sentence,
-            'post_id' => Post::inRandomOrder()->first()->id,
-            
+            'user_id' => User::factory(),
+            'bio' => fake()->sentence,
+            'avatar' => fake()->imageUrl(200, 200, 'people'),
         ];
     }
 }
