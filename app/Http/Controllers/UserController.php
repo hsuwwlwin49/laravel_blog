@@ -10,9 +10,9 @@ class UserController extends Controller
     //
     public function index() {
 
-        // $user = User::with('profile')->find(1);
-        // $user->profile->bio;
-        // dd($user);
+        $user = User::with('profile')->find(11);
+        $user->profile->bio;
+        dd($user);
 
         // $users = User::with('profile')->get();
         // echo $users;
@@ -27,11 +27,11 @@ class UserController extends Controller
         // $user_id = $user->profile->user_id;
         // dd($bio, $user_id);
 
-        $users = User::with('profile')->get();
-        $user = $users[11];
-        $bio = $user->profile->bio;
-        $user_id = $user->profile->user_id;
-        dd($bio, $user_id);
+        // $users = User::with('profile')->get();
+        // $user = $users[11];
+        // $bio = $user->profile->bio;
+        // $user_id = $user->profile->user_id;
+        // dd($bio, $user_id);
 
     }
 

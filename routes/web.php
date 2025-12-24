@@ -3,9 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 
 
 Route::get('/test-relation', [UserController::class, 'index']);
+Route::get('/profile', [ProfileController::class, 'index']);
 
 Route::get('/articles', [ArticleController::class, 'index']);
 Route::get('/articles/detail', [ArticleController::class, 'detail']);

@@ -15,4 +15,8 @@ class Profile extends Model
         'avatar',
         
     ];
+    public function user()
+{
+    return $this->belongsTo(User::class);
+}
 }
