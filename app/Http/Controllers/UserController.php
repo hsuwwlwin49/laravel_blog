@@ -35,4 +35,46 @@ class UserController extends Controller
 
     }
 
+    public function postList() {
+        // $user = User::with('posts')->find(11);
+        // $posts = $user->posts;
+        // dd($posts);
+
+        // $user_posts  = User::find(3)->posts;
+        // dd($user_posts);
+
+
+        $user_posts  = User::find(11)->posts;
+        foreach($user_posts as $user_post) {
+            $user_post_title[] = $user_post->title;
+        }
+        dd($user_post_title);
+
+
+    }
+
+    public function showLatestComment($userId)
+    {
+        // Using find()
+        $user = User::find($userId);
+
+        // Access single comment through hasOneThrough
+        $latestComment = $user->latestCommentThroughPost;
+
+        // Show result
+        dd($latestComment->comment);
+    }
+
+    public function showUserComments($id)
+    {
+        // get single user
+        $user = User::find($id);
+
+        // get all comments through posts
+        $comments = $user->commentsThroughPosts;
+
+        foreach ($comments as $comment) {
+            echo $comment->comment . "<br>";
+        }
+    }
 }
