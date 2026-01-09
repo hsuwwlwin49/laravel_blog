@@ -12,6 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+        // alias middleware (route middleware)
+        $middleware->alias([
+            'check.email' => \App\Http\Middleware\CheckEmail::class,
+            'is.owner' => \App\Http\Middleware\IsOwner::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
