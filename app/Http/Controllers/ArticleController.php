@@ -29,6 +29,22 @@ class ArticleController extends Controller
             'articles' => $data
         ]);
     }
+
+    public function create()
+{
+  return view('articles.create');
+}
+
+    public function store(Request $request)
+  {
+      Article::create([
+          'title' => $request->title,
+          'body' => $request->body,
+          'category_id' => $request->category_id,
+      ]);
+
+      return redirect('/articles/create');
+  }
     public function detail($id)
     {
         return "Controller - Article Detail - $id";

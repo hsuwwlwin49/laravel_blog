@@ -26,4 +26,26 @@ class PostController extends Controller
     {
         return view('posts.show', compact('post'));
     }
+
+    public function create()
+    {
+        return view('posts.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'body'  => 'required|string',
+        ]);
+
+        Post::create([
+            'user_id' => auth()->id(), //  set automatically
+            'title'   => $request->title,
+            'body'    => $request->body,
+        ]);
+
+        return redirect('/posts')->with('success', 'Post created successfully');
+    }
+
 }
